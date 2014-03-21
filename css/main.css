@@ -107,6 +107,52 @@ html, body {
 	margin: 20px;
 }
 
+/* header */
+#header {
+	height: 200px;
+	width: 100%;
+	text-align: center;
+	line-height: 1em;
+}
+
+#header img {
+	height: 100px;
+	width: 100px;
+	margin: 20px auto;
+	display: block;
+}
+
+
+#main {
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* home */
+#job_seeker {
+	float: left;
+	height: 200px;
+	width: 200px;
+}
+	
+	#job_seeker img, #job_lister img {
+		height: 150px;
+		width: 200px;
+	}
+	
+#or {
+	position: absolute;
+	height: 150px;
+	width: 150px;
+}
+
+#job_lister {
+	float: right;
+	height: 200px;
+	width: 200px;
+}
+
 /* job list */
 .job_listing {
 	width: 80%;
