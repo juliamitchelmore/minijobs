@@ -1,10 +1,27 @@
 class JobsController < ApplicationController
   before_filter :require_adult except: [:index, :show]
   before_filter :require_kid only: [:index, :show]
+
+  # FOR PARENTS
+  def accept_job
+    # verify token...
+    job = Job.find(param[:id])
+    job.status = 'parent accepted'
+  end
+
+  # FOR LISTERS
+  def accept_application
+    # verify token...
+    job = Job.find(param[:id])
+    job.status = 'application accepted'
+  end
+
   # GET /jobs
   # GET /jobs.json
+  # FOR KIDS
   def index
-    @jobs = Job.near(current_user.lat_long, current_user.distance/10.0, units: :km)
+    listers = Adult.listers.near(current_user.lat_long, current_user.distance, units: :km)
+    @jobs = listers.map(&:jobs)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -43,6 +60,7 @@ class JobsController < ApplicationController
   # POST /jobs.json
   def create
     @job = Job.new(params[:job])
+    @job.status = 'listed'
 
     respond_to do |format|
       if @job.save

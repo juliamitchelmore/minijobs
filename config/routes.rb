@@ -6,7 +6,12 @@ Minijobs::Application.routes.draw do
 
   resources :adults
   resources :kids
-  resources :jobs
+  resources :jobs do
+    member do
+      get 'application' => 'jobs#accept_job'
+      get 'accept' => 'jobs#accept_application'
+    end
+  end
 
 
   # The priority is based upon order of creation:

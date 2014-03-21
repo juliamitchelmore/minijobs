@@ -13,6 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20140321225452) do
 
+
   create_table "adults", :force => true do |t|
     t.string   "name"
     t.string   "email"
@@ -49,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20140321225452) do
     t.string   "image"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "status"
   end
 
   create_table "kids", :force => true do |t|
