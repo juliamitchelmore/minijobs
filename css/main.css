@@ -122,13 +122,14 @@ html, body {
 	display: block;
 }
 
-/* home */
-#home {
+
+#main {
 	width: 60%;
 	margin: 0 auto;
 	text-align: center;
 }
 
+/* home */
 #job_seeker {
 	float: left;
 	height: 200px;
