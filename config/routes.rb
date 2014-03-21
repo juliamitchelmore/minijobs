@@ -1,5 +1,5 @@
 Minijobs::Application.routes.draw do
-  root to: "home#index"
+  root to: "content#index"
 
   devise_for :adults
   devise_for :kids
