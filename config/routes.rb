@@ -2,7 +2,10 @@ Minijobs::Application.routes.draw do
   devise_for :kids
 
   root to: "home#index"
+
+  resources :adults
   resources :kids
+
 
 
   # The priority is based upon order of creation:

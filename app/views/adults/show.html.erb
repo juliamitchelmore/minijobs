@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @adult.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @adult.email %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @adult.address %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @adult.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @adult.longitude %>
+</p>
+
+
+<%= link_to 'Edit', edit_adult_path(@adult) %> |
+<%= link_to 'Back', adults_path %>
