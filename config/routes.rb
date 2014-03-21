@@ -1,6 +1,8 @@
 Minijobs::Application.routes.draw do
   root to: "content#index"
 
+  get 'me' => 'content#dashboard'
+
   devise_for :adults
   devise_for :kids
 

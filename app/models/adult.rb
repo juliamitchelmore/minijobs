@@ -18,4 +18,12 @@ class Adult < ActiveRecord::Base
   def kids
     Kid.all
   end
+
+  def parent?
+    type == 'parent'
+  end
+
+  def adult?
+    type == 'adult'
+  end
 end
