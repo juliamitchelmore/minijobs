@@ -7,4 +7,8 @@ class Kid < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :password, :username
   attr_accessible :name
+
+  belongs_to :adult
+  has_many :jobs, :through => :adult
+
 end
