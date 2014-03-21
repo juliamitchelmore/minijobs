@@ -1,4 +1,7 @@
 Minijobs::Application.routes.draw do
+  devise_for :adults
+
+  devise_for :kids
 
   resources :jobs
 
