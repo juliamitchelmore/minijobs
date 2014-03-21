@@ -7,4 +7,7 @@ class Adult < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :address, :email, :latitude, :longitude, :name
+
+  has_many :jobs
+  has_many :kids
 end
