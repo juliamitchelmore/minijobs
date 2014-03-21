@@ -18,4 +18,8 @@ class Kid < ActiveRecord::Base
   belongs_to :adult
   has_many :jobs, :through => :adult
 
+  def lat_long
+    [adult.latitude, adult.longitude]
+  end
+
 end

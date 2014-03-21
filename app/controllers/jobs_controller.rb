@@ -1,9 +1,10 @@
 class JobsController < ApplicationController
   before_filter :require_adult except: [:index, :show]
+  before_filter :require_kid only: [:index, :show]
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all
+    @jobs = Job.near(current_user.lat_long, current_user.distance/10.0, units: :km)
 
     respond_to do |format|
       format.html # index.html.erb

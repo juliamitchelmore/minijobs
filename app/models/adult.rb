@@ -10,4 +10,7 @@ class Adult < ActiveRecord::Base
 
   has_many :jobs
   has_many :kids
+
+  geocoded_by :full_street_address   # can also be an IP address
+  after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
 end

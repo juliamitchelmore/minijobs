@@ -7,6 +7,7 @@ gem 'rails', '3.2.14'
 
 gem 'devise'
 gem 'sqlite3'
+gem 'geocoder'
 
 
 # Gems used only for assets and not required
