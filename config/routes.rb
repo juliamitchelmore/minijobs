@@ -1,4 +1,7 @@
 Minijobs::Application.routes.draw do
+  resources :adults
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

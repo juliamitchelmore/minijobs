@@ -1,0 +1,31 @@
+<h1>Listing adults</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @adults.each do |adult| %>
+  <tr>
+    <td><%= adult.name %></td>
+    <td><%= adult.email %></td>
+    <td><%= adult.address %></td>
+    <td><%= adult.latitude %></td>
+    <td><%= adult.longitude %></td>
+    <td><%= link_to 'Show', adult %></td>
+    <td><%= link_to 'Edit', edit_adult_path(adult) %></td>
+    <td><%= link_to 'Destroy', adult, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Adult', new_adult_path %>
