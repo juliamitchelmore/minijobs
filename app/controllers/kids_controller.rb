@@ -1,12 +1,5 @@
 class KidsController < ApplicationController
 
-  def apply_for_job
-    job = Job.find(params[:job_id])
-    job.status = 'applied'
-    job.save
-    current_user.jobs << job
-  end
-
   # GET /kids
   # GET /kids.json
   def index

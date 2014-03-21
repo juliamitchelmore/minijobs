@@ -8,8 +8,9 @@ Minijobs::Application.routes.draw do
   resources :kids
   resources :jobs do
     member do
+      get 'apply' => 'jobs#apply_for_job'
       get 'application' => 'jobs#accept_job'
-      get 'accept' => 'jobs#accept_application'
+      get 'accept/:kid_id' => 'jobs#accept_application'
     end
   end
 
