@@ -1,5 +1,10 @@
 Minijobs::Application.routes.draw do
+
+  root to: "home#index"
+
   resources :adults
+  resources :kids
+
 
 
   # The priority is based upon order of creation:
