@@ -1,5 +1,8 @@
 Minijobs::Application.routes.draw do
 
+  resources :jobs
+
+
   root to: "home#index"
 
   resources :adults
