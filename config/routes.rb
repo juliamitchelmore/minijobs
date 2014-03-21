@@ -1,4 +1,6 @@
 Minijobs::Application.routes.draw do
+  devise_for :kids
+
   root to: "home#index"
   resources :kids
 
