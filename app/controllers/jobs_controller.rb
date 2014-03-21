@@ -1,4 +1,5 @@
 class JobsController < ApplicationController
+  before_filter :require_adult except: [:index, :show]
   # GET /jobs
   # GET /jobs.json
   def index
@@ -79,5 +80,10 @@ class JobsController < ApplicationController
       format.html { redirect_to jobs_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+  def require_adult
+    current_user.is_a? Adult
   end
 end
