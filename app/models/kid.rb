@@ -15,11 +15,16 @@ class Kid < ActiveRecord::Base
   attr_accessible :password, :username
   attr_accessible :name
 
-  belongs_to :adult
-  has_many :jobs, :through => :adult
-
   def lat_long
     [adult.latitude, adult.longitude]
+  end
+
+  def parent
+    Adult.parent.first
+  end
+
+  def jobs
+    parent.jobs
   end
 
 end

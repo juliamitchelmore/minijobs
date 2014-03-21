@@ -20,7 +20,7 @@ class JobsController < ApplicationController
   # GET /jobs.json
   # FOR KIDS
   def index
-    listers = Lister.near(current_user.lat_long, current_user.distance, units: :km)
+    listers = Adult.listers.near(current_user.lat_long, current_user.distance, units: :km)
     @jobs = listers.map(&:jobs)
 
     respond_to do |format|
