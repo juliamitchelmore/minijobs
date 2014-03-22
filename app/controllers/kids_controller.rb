@@ -13,7 +13,7 @@ class KidsController < ApplicationController
 
   # GET /kids/1
   # GET /kids/1.json
-  def profile
+  def show
     @kid = Kid.find(params[:id])
 
     respond_to do |format|
