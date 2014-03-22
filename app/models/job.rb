@@ -5,5 +5,4 @@ class Job < ActiveRecord::Base
 
   has_many :kids, :through => :adult
 
-
 end
