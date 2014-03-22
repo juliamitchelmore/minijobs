@@ -5,4 +5,16 @@ class Job < ActiveRecord::Base
 
   has_many :kids, :through => :adult
 
+  def lister
+    adults.all_listers.first
+  end
+
+  def parent
+    adults.all_parents.first
+  end
+
+  def kid
+    parent.kid
+  end
+
 end
