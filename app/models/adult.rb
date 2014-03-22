@@ -1,6 +1,6 @@
 class Adult < ActiveRecord::Base
-  scope :parent, -> { where(type: 'parent') }
-  scope :parent, -> { where(type: 'lister') }
+  scope :all_parents, -> { where(type: 'parent') }
+  scope :all_listers, -> { where(type: 'lister') }
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -11,13 +11,10 @@ class Adult < ActiveRecord::Base
   attr_accessible :address, :email, :latitude, :longitude, :name
 
   has_many :jobs
+  has_many :kids
 
-  geocoded_by :full_street_address   # can also be an IP address
+  geocoded_by :address   # can also be an IP address
   after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
-
-  def kids
-    Kid.all
-  end
 
   def parent?
     type == 'parent'
