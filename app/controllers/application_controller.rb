@@ -9,4 +9,8 @@ class ApplicationController < ActionController::Base
     authenticate_kid! || authenticate_adult!
   end
 
+  def after_sign_in_path_for(user)
+    me_path
+  end
+
 end
