@@ -8,4 +8,5 @@ class ApplicationController < ActionController::Base
   def authenticate_user!
     authenticate_kid! || authenticate_adult!
   end
+
 end
