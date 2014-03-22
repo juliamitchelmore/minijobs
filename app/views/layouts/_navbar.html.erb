@@ -3,6 +3,7 @@
   <%= link_to image_tag("img/nav-profile.png"), profile_path %>
   <%= link_to image_tag("nav-home.png"), me_path %>
   <%= link_to image_tag("nav-jobs.png"), jobs_path %>
-  <%= link_to 'Sign out', "/#{user_type}s/sign_out", :method => :delete %>
+  <%= link_to 'kid Sign out', "/kids/sign_out", :method => :delete %>
+  <%= link_to 'adult Sign out', "/adults/sign_out", :method => :delete %>
 
 </div>

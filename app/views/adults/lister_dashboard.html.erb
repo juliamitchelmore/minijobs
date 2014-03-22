@@ -1,5 +1,5 @@
-<% jobs.each do |job| %>
-  <%job.kids.each do |kid| %>
+<% current_user.jobs.each do |job| %>
+  <% job.kids.each do |kid| %>
     <div class="applicant_listing">
       <img class="application_img">
       <h2 class="job_name"><%= job.name %></h2>
