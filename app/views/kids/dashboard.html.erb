@@ -1,20 +1,120 @@
-<div id="main">
-  <h1>Dashboard</h3>
-  <% current_kid.jobs.each do |job| %>
-    <div class="job_listing">
-        <div class="job_post">
-          <img class="job_img">
-          <div class="job_details">
-              <h2 class="job_name"><%= job.name %></h2>
-              <h3 class="job_lister">job.adult.all_listers.last.name</h3>
-              <h4 class="job_distance"><%= job.distance %> min away</h4>
-              <p class="job_description"><%= job.description %></p>
-          </div>
-          <div class="job_current">
-            <h5 class="job_price"><%= job.cost %></h5>
-              <h6 class="job_status"><%= job.status %></h6>
-          </div>
-        </div>
-    </div>
+          <div id="main">
+                <div id="dashboard">
+                   <% current_kid.jobs.each do |job| %>
+                  <div id="summary">
+                      <img class="summary_img" src="app/assets/images/dashboard-seeker-profile.png">
+                        <h1>SUMMARY</h1>
+                        <div id="pending">
+                          <img src="app/assets/images/dashboard-icon-completed.png">
+                            <h2>Pending</h2>
+                            <p>2 jobs to be approved</p>
+                        </div>
+                        <div id="completed">
+                          <img src="app/assets/images/dashboard-icon-approved.png">
+                            <h2>Completed</h2>
+                            <p>2 jobs completed</p>
+                        </div>
+                        <div id="progress">
+                          <img src="app/assets/images/dashboard-icon-inprogress.png">
+                            <h2>In Progress</h2>
+                            <p>3 upcoming jobs</p>
+                        </div>
+
+                    </div>
+                    <div class="dashboard_listing">
+                      <img class="job_img" src="img/jobs-profile1.png">
+                        <div class="job_post">
+                          <h3 class="job_lister"><%= job.adult.all_listers.last.name %></h3>
+                            <h2 class="job_name"><%= job.name %></h2>
+
+
+                            <div class="job_details">
+                              <div class="job_distance">
+                                  <img src="img/jobs-icon-location.png">
+                                  <h4>10 mins</h4>
+                                    <p>Walking Distance</p>
+                                </div>
+                                <div class="job_price">
+                                  <img src="img/jobs-icon-coin.png">
+                                  <h4>$30</h4>
+                                    <p>Once a week</p>
+                                </div>
+                            </div>
+                            <div class="job_description">
+                              <h5>DESCRIPTION</h5>
+                                <p>Description of job Description of job Description of job Description of job Description of job</p>
+                            </div>
+                            <div class="job_status">
+                                <img src="app/assets/images/dashboard-icon-approved.png">
+                                <h2>Completed</h2>
+                                <p>On 25/02/2014</p>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="dashboard_listing">
+                      <img class="job_img" src="img/jobs-profile2.png">
+                        <div class="job_post">
+                          <h3 class="job_lister">Job Lister</h3>
+                            <h2 class="job_name">Job Name</h2>
+                            <div class="job_details">
+                              <div class="job_distance">
+                                  <img src="img/jobs-icon-location.png">
+                                  <h4>10 mins</h4>
+                                    <p>Walking Distance</p>
+                                </div>
+                                <div class="job_price">
+                                  <img src="img/jobs-icon-coin.png">
+                                  <h4>$30</h4>
+                                    <p>Once a week</p>
+                                </div>
+                            </div>
+                            <div class="job_description">
+                              <h5>DESCRIPTION</h5>
+                                <p>Description of job Description of job Description of job Description of job Description of job</p>
+                            </div>
+                            <div class="job_status">
+                                <img src="app/assets/images/dashboard-icon-completed.png">
+                                <h2>pending</h2>
+                                <p>confirmation needed</p>
+                            </div>
+                        </div>
+                        </div>
+
+                      <div class="dashboard_listing">
+                      <img class="job_img" src="img/jobs-profile3.png">
+                        <div class="job_post">
+                          <h3 class="job_lister">Job Lister</h3>
+                            <h2 class="job_name">Job Name</h2>
+
+
+                            <div class="job_details">
+                              <div class="job_distance">
+                                  <img src="img/jobs-icon-location.png">
+                                  <h4>10 mins</h4>
+                                    <p>Walking Distance</p>
+                                </div>
+                                <div class="job_price">
+                                  <img src="img/jobs-icon-coin.png">
+                                  <h4>$30</h4>
+                                    <p>Once a week</p>
+                                </div>
+                            </div>
+                            <div class="job_description">
+                              <h5>DESCRIPTION</h5>
+                                <p>Description of job Description of job Description of job Description of job Description of job</p>
+                            </div>
+                            <div class="job_status">
+                                <img src="app/assets/images/dashboard-icon-approved.png">
+                                <h2>Completed</h2>
+                                <p>On 28/02/2014</p>
+                            </div>
+                            </div>
+                      </div>
+                </div>
+
+
+
+
   <% end %>
 </div>
