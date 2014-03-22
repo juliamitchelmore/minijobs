@@ -111,7 +111,7 @@ textarea {
 html, body {
 	width: 100%;
 	height: 100%;
-	background: url("../img/home-BG.jpg");
+	background: url("../img/BG.jpg");
 	font-family: 'DinRegular';
 	color: #FFF;
 	line-height: 1em;
@@ -154,10 +154,11 @@ html, body {
 	top: 0;
 	left: 0;
 	width: 100px;
+	padding: 10px;
 }
 #nav img {
-	width: 100px;
-	height: 50px;
+	width: 53px;
+	margin: 5px;
 }
 
 /* home */
@@ -249,7 +250,7 @@ input {
 
 /* job list */
 #listing_container {
-	width: 90%;
+	width: 86%;
 	display: block;
 	margin: 0 auto;
 }
@@ -347,6 +348,8 @@ h2, h3, h4, h5, p {
 	border: none;
 	background: #f06455;
 	border-radius: 5px;
+	color: #FFF;
+	-webkit-box-shadow: 0px 3px 0px 0px rgba(216, 90, 76, 0.75);
 }
 
 
