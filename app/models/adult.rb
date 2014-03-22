@@ -1,6 +1,6 @@
 class Adult < ActiveRecord::Base
-  scope :parent, -> { where(type: 'parent') }
-  scope :parent, -> { where(type: 'lister') }
+  scope :parents, -> { where(type: 'parent') }
+  scope :listers, -> { where(type: 'lister') }
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
