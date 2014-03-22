@@ -17,4 +17,16 @@ class Job < ActiveRecord::Base
     parent.present? ? [parent.kid] : []
   end
 
+  def kid_applied?
+    status == 'applied'
+  end
+
+  def parent_accepted?
+    status == 'parent accepted'
+  end
+
+  def application_accepted?
+    status == 'application accepted'
+  end
+
 end

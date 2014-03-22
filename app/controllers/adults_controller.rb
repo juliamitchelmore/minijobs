@@ -1,5 +1,4 @@
 class AdultsController < ApplicationController
-  before_filter :authenticate_user!
   # GET /adults
   # GET /adults.json
   def index
