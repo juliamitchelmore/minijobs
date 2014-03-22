@@ -9,6 +9,13 @@ gem 'devise'
 gem 'sqlite3'
 gem 'geocoder'
 
+group :development, :test do
+  gem 'pry', require: false
+  gem 'pry-debugger'
+end
+
+
+
 
 # Gems used only for assets and not required
 # in production environments by default.
