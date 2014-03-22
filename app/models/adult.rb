@@ -20,8 +20,8 @@ class Adult < ActiveRecord::Base
     role == 'parent'
   end
 
-  def adult?
-    role == 'adult'
+  def lister?
+    role == 'lister'
   end
 
   def kid

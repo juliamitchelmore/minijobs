@@ -13,8 +13,8 @@ class Job < ActiveRecord::Base
     adults.all_parents.first
   end
 
-  def kid
-    parent.kid
+  def kids
+    parent.present? ? [parent.kid] : []
   end
 
 end
