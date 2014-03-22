@@ -1,5 +1,5 @@
 class ContentController < ApplicationController
-  before_filter :authenticate_user!, only: [:dashboard, :profile]
+
   def index
   end
 
