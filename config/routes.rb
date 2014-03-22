@@ -1,11 +1,11 @@
 Minijobs::Application.routes.draw do
+  devise_for :adults
+  devise_for :kids
+
   root to: "content#index"
 
   get 'me' => 'content#dashboard'
   get 'profile' => 'content#profile'
-
-  devise_for :adults
-  devise_for :kids
 
   resources :adults
   resources :kids

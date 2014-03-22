@@ -1,4 +1,6 @@
 <div>
   <%= link_to 'Profile', profile_path %>
   <%= link_to 'Dashboard', me_path %>
+  <%= link_to 'Jobs', jobs_path %>
+  <%= link_to 'Sign out', "/#{user_type}s/sign_out", :method => :delete %>
 </div>
