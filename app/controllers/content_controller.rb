@@ -4,9 +4,9 @@ class ContentController < ApplicationController
   end
 
   def dashboard
-    render 'kid/dashboard' and return if current_user.is_a? Kid
-    render 'adult/parent_dashboard' and return if current_user.parent?
-    render 'adult/lister_dashboard' and return if current_user.lister?
+    render 'kids/dashboard' and return if current_user.is_a? Kid
+    render 'adults/parent_dashboard' and return if current_user.parent?
+    render 'adults/lister_dashboard' and return if current_user.lister?
   end
 
   def profile
