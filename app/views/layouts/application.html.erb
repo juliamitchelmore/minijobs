@@ -15,7 +15,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= render partial: 'layouts/navbar' %>
+    <%= render partial: 'layouts/navbar' if current_user.present? %>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
