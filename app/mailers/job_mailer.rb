@@ -1,5 +1,5 @@
 class JobMailer < ActionMailer::Base
-  default from: "jobs@mini-job.me"
+  default from: "ang.gove@gmail.com"
  
   # kid has applied for a job,
   # parent can view job listing and decide to approve from there
