@@ -1,7 +1,9 @@
-<div>
-  <%= link_to 'Profile', profile_path %>
-  <%= link_to 'Dashboard', me_path %>
-  <%= link_to 'Jobs', jobs_path %>
+<div id="nav">
+<!--   < %= link_to image_tag("home-seeker.png"), new_kid_session_path, :id "job_seeker" %> -->
+  <%= link_to image_tag("img/nav-profile.png"), profile_path %>
+  <%= link_to image_tag("nav-home.png"), me_path %>
+  <%= link_to image_tag("nav-jobs.png"), jobs_path %>
   <%= link_to 'kid Sign out', "/kids/sign_out", :method => :delete %>
   <%= link_to 'adult Sign out', "/adults/sign_out", :method => :delete %>
+
 </div>
