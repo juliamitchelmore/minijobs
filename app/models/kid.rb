@@ -25,7 +25,7 @@ class Kid < ActiveRecord::Base
   end
 
   def parent
-    Adult.all_parents.first
+    adult
   end
 
   def jobs
