@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140321225452) do
+ActiveRecord::Schema.define(:version => 20140322014008) do
 
   create_table "adults", :force => true do |t|
     t.string   "name"
@@ -50,13 +50,13 @@ ActiveRecord::Schema.define(:version => 20140321225452) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "status"
+    t.integer  "adult_id"
   end
 
   create_table "kids", :force => true do |t|
     t.string   "name"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
-    t.integer  "parent_id"
     t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false
     t.string   "reset_password_token"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20140321225452) do
     t.string   "last_sign_in_ip"
     t.integer  "adult_id"
     t.integer  "distance"
+    t.text     "about"
   end
 
   add_index "kids", ["email"], :name => "index_kids_on_email", :unique => true

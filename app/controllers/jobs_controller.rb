@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
   before_filter :authenticate_user!
-  before_filter :require_adult except: [:show]
-  before_filter :require_kid only: [:show]
+  before_filter :require_adult, except: [:show]
+  before_filter :require_kid, only: [:show]
 
   # FOR KIDS
   def apply_for_job
@@ -33,8 +33,9 @@ class JobsController < ApplicationController
   # GET /jobs.json
   # FOR KIDS
   def index
-    listers = Adult.listers.near(current_user.lat_long, current_user.distance, units: :km)
-    @jobs = listers.map(&:jobs)
+    @distance = 3
+    listers = Adult.near(current_user.lat_long, @distance, units: :km)
+    @jobs = listers.map(&:jobs).flatten
 
     respond_to do |format|
       format.html # index.html.erb

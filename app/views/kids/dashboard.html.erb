@@ -1,1 +1,20 @@
-KID DASHBOARD HERE
+<div id="main">
+  <h1>Dashboard</h3>
+  <% @jobs.each do |job| %>
+    <div class="job_listing">
+        <div class="job_post">
+          <img class="job_img">
+          <div class="job_details">
+              <h2 class="job_name"><%= job.name %></h2>
+              <h3 class="job_lister">job.adult.all_listers.last.name</h3>
+              <h4 class="job_distance"><%= job.distance %></h4>
+              <p class="job_description"><%= job.description %></p>
+          </div>
+          <div class="job_current">
+            <h5 class="job_price"><%= job.cost %></h5>
+              <h6 class="job_status"><%= job.status %></h6>
+          </div>
+        </div>
+    </div>
+  <% end %>
+</div>
