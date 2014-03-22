@@ -460,6 +460,18 @@ h2, h3, h4, h5, p {
 	.job_status p {
 		font-size: 13px;
 	}
+	
+/* profile */
+#profile_image {
+	float: left;
+	width: 200px;
+}
+
+#profile_details{
+	float: right;
+	width: 50%;
+	text-align: left;
+}
 
 
 /* ==========================================================================
