@@ -1,10 +1,14 @@
 <div id="main">
-  <h1>Are you a</h1>
-  <div id="job_seeker">
-    <%= link_to image_tag("to mini job seaker"), new_kid_session_path %>
+  <div id="home_text">
+    <h1 id="title">Mini Jobs for Mini People in your Neighbourhood</h1>
+      <h2 class="tag">A platform that connects Mini Job Seekers and Mini Job Listers around the corner.</h2>
+      <h2 class="tag">FAIR. EASY. SAFE.</h2>
   </div>
-  <img id="or" src="">
-  <div id="job_lister">
-    <%= link_to image_tag(""), new_adult_session_path %>
+
+  <h1 id="areyou">ARE YOU A</h1>
+  <div id="home_images">
+    <%= link_to image_tag("home-seeker.png"), new_kid_session_path, :id "job_seeker" %>
+    <%= link_to image_tag("home-lister.png"), new_adult_session_path, :id "job_lister" %><!--link to login (as adult)-->
   </div>
 </div>
+
