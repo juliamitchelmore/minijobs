@@ -252,7 +252,7 @@ html, body {
 
 /* job list */
 #listing_container {
-	width: 86%;
+	width: 87%;
 	display: block;
 	margin: 0 auto;
 }
@@ -361,11 +361,11 @@ h2, h3, h4, h5, p {
 	display: block;
 	margin: 0 auto;
 	margin-top: 80px;
-	width: 86%;
+	width: 87%;
 }
 
 #summary {
-	width: 70%;
+	width: 75%;
 	margin-top: 100px;
 	height: 200px;
 	display: block;
@@ -402,7 +402,7 @@ h2, h3, h4, h5, p {
 	}
 	
 	#pending {
-		margin-left: 8px;
+		margin-left: 10px;
 	}
 
 		#pending img, #completed img, #progress img {
@@ -459,6 +459,40 @@ h2, h3, h4, h5, p {
 	
 	.job_status p {
 		font-size: 13px;
+	}
+	
+/* profile */
+#profile {
+	width: 75%;
+	display: block;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+#profile_image {
+	float: left;
+	width: 200px;
+}
+
+#profile_details{
+	float: right;
+	width: 50%;
+	text-align: left;
+}
+
+	.profile_title {
+		font-size: 18px;
+		padding-left: 10px;
+		margin: 5px;
+	}
+	
+	.profile_content {
+		font-size: 15px;
+		background: #ececec;
+		display: block;
+		padding: 10px;
+		color: #000;
+		margin-bottom: 20px;
 	}
 
 

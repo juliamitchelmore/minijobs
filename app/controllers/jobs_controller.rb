@@ -8,7 +8,7 @@ class JobsController < ApplicationController
     job.status = 'applied'
     job.save
     current_user.jobs << job
-
+    redirect_to me_path
     # JobMailer.job_applied_email(current_user, job)
   end
 
@@ -38,7 +38,7 @@ class JobsController < ApplicationController
   def index
     @distance = 3
     listers = Adult.near(current_user.lat_long, @distance, units: :km)
-    @jobs = listers.map(&:jobs).flatten
+    @jobs = listers.map(&:jobs).flatten.uniq
 
     respond_to do |format|
       format.html # index.html.erb
