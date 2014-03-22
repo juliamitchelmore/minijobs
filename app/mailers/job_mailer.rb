@@ -12,7 +12,7 @@ class JobMailer < ActionMailer::Base
   # parent is allowing kid to apply for job,
   # lister can see kid's profile and decide to accept the application
   def job_parent_accepted_email(parent, job)
-    @kid = parent.kids.first
+    @kid = parent.kid
     @url  = kid_url(@kid)
     @lister = job.lister
     mail(to: @lister.email, subject: "#{kid.name} has applied for a job!")
