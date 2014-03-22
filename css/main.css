@@ -228,7 +228,7 @@ html, body {
 	margin: 0 auto;
 }
 
-input, #submit {
+.input, #submit {
 	width: 180px;
 	height: 30px;
 	margin: 5px;
@@ -236,7 +236,7 @@ input, #submit {
 	border-radius: 5px;
 }
 
-input {
+.input {
 	-webkit-box-shadow: 3px 3px 0px 0px rgba(50, 50, 50, 0.75);
 }
 
@@ -358,8 +358,30 @@ h2, h3, h4, h5, p {
 #dashboard {
 	display: block;
 	margin: 0 auto;
-	width: 60%;
+	width: 86%;
 }
+
+#summary {
+	width: 60%;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	background: #ececec;
+}
+
+	
+
+	#summary img {
+		height: 100px;
+		width: 100px;
+		position: absolute;
+		margin-top: -50px;
+		margin-left: -50px;
+	}
+	
+	#summary h1 {
+		
+	}
 
 .dashboard_child_listing {
 	width: 300px;
