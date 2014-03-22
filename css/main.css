@@ -317,6 +317,7 @@ input {
 	
 	.job_distance p, .job_price p {
 		font-size: 13px;
+		margin: 2px;
 	}
 	
 .job_description {
