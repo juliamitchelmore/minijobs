@@ -1,31 +1,17 @@
-<h1>Listing jobs</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Duration</th>
-    <th>Cost</th>
-    <th>Image</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<h1>Job List</h3>
 <% @jobs.each do |job| %>
-  <tr>
-    <td><%= job.name %></td>
-    <td><%= job.description %></td>
-    <td><%= job.duration %></td>
-    <td><%= job.cost %></td>
-    <td><%= job.image %></td>
-    <td><%= link_to 'Show', job %></td>
-    <td><%= link_to 'Edit', edit_job_path(job) %></td>
-    <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <div class="job_listing">
+      <div class="job_post">
+        <img class="job_img">
+        <div class="job_details">
+            <h2 class="job_name"><%= job.name %>Job Name</h2>
+            <h3 class="job_lister">job.adult.all_listers.last.name</h3>
+            <h4 class="job_distance"><%= job.distance %></h4>
+            <p class="job_description"><%= job.description %></p>
+        </div>
+
+        <button class="job_apply">Apply</button> <!--call pop up-->
+        <h5 class="job_price"><%= job.cost %></h5>
+      </div>
+  </div>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Job', new_job_path %>

@@ -1,1 +1,11 @@
-PARENT'S DASHBOARD HERE
+<% current_user.jobs.each do |job| %>
+  <div class="applied_listing">
+    <img class="job_img">
+        <h2 class="job_name"><%= job.name %>Job Name</h2>
+        <h3 class="job_lister">job.adult.all_listers.last.name</h3>
+        <h4 class="job_distance"><%= job.distance %></h4>
+        <p class="job_description"><%= job.description %></p>
+      <h5 class="job_price"><%= job.cost %></h5>
+      <button class="applied_accept">Accept</button> <!--job accepted by parent-->
+  </div>
+<% end %>
