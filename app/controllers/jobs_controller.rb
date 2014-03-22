@@ -1,6 +1,7 @@
 class JobsController < ApplicationController
-  before_filter :require_adult except: [:index, :show]
-  before_filter :require_kid only: [:index, :show]
+  before_filter :authenticate_user!
+  before_filter :require_adult except: [:show]
+  before_filter :require_kid only: [:show]
 
   # FOR KIDS
   def apply_for_job
