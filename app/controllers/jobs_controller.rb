@@ -1,5 +1,4 @@
 class JobsController < ApplicationController
-  before_filter :authenticate_user!
   before_filter :require_adult, except: [:show]
   before_filter :require_kid, only: [:show]
 
@@ -10,23 +9,27 @@ class JobsController < ApplicationController
     job.save
     current_user.jobs << job
 
-    JobMailer.job_applied_email(current_user, job)
+    # JobMailer.job_applied_email(current_user, job)
   end
 
   # FOR PARENTS
   def accept_job
     # verify token...
-    job = Job.find(param[:id])
+    job = Job.find(params[:id])
     job.status = 'parent accepted'
-    JobMailer.job_parent_accepted_email(current_user, job)
+    job.save
+    redirect_to me_path
+    # JobMailer.job_parent_accepted_email(current_user, job)
   end
 
   # FOR LISTERS
   def accept_application
-    job = Job.find(param[:id])
-    kid = Kid.find(param[:kid_id])
+    job = Job.find(params[:id])
+    kid = Kid.find(params[:kid_id])
     job.status = 'application accepted'
-    JobMailer.job_lister_accepted_email(current_user, kid, job)
+    job.save
+    redirect_to me_path
+    # JobMailer.job_lister_accepted_email(current_user, kid, job)
   end
 
   # GET /jobs
