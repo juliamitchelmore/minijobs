@@ -229,18 +229,29 @@ html, body {
 
 input, #submit {
 	width: 180px;
-	height: 20px;
+	height: 30px;
 	margin: 5px;
 	border: none;
+	border-radius: 5px;
 }
 
 input {
 	-webkit-box-shadow: 3px 3px 0px 0px rgba(50, 50, 50, 0.75);
 }
 
+#submit {
+	color: #FFF;
+	background: #f06455;
+	-webkit-box-shadow: 1px 5px 0px 0px rgba(216, 90, 76, 0.75);
+	
+	
+}
+
 /* job list */
 #listing_container {
-	width: 80%;
+	width: 90%;
+	display: block;
+	margin: 0 auto;
 }
 
 .job_listing {
@@ -250,7 +261,8 @@ input {
 	margin: 10px;
 	background: #ececec;
 	color: #000;
-
+	margin-top: 80px;
+	float: left;
 }
 
 .job_img {
@@ -266,11 +278,21 @@ input {
 	height: 100px;
 }
 
+.job_lister, .job_name {
+	text-transform: uppercase;
+	margin: 5px;
+}
+
+.job_lister {
+	font-size: 15px;
+}
+
 .job_details {
 	width: 80%;
 	padding: 0 20px;
 	height: 100px;
-	padding-top: 30px;
+	padding-top: 0px;
+	margin: 10px auto;
 }
 
 	.job_distance {
@@ -300,6 +322,7 @@ input {
 	background: #d3d3d3;
 	width: 80%;
 	margin: 0 auto;
+	border-radius: 5px;
 }
 
 	.job_description h5 {
@@ -320,8 +343,10 @@ h2, h3, h4, h5, p {
 .job_apply {
 	width: 80%;
 	margin: 10px 0;
-	height: 20px;
+	height: 40px;
 	border: none;
+	background: #f06455;
+	border-radius: 5px;
 }
 
 
