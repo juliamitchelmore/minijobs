@@ -1,4 +1,4 @@
-<% current_user.jobs.each do |job| %>
+<% current_user.jobs.uniq.each do |job| %>
   <% job.kids.each do |kid| %>
     <div class="applicant_listing">
       <img class="application_img">

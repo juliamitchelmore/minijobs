@@ -1,5 +1,5 @@
 <h1>Job List</h3>
-<% @jobs.each do |job| %>
+<% @jobs.uniq.each do |job| %>
   <div class="job_listing">
       <div class="job_post">
         <img class="job_img">
@@ -9,8 +9,7 @@
             <h4 class="job_distance"><%= job.distance %> min away</h4>
             <p class="job_description"><%= job.description %></p>
         </div>
-
-        <button class="job_apply">Apply</button> <!--call pop up-->
+        <%= button_to "Apply", apply_job_path(job), class: "job_apply", method: :get %>
         <h5 class="job_price"><%= job.cost %></h5>
       </div>
   </div>
